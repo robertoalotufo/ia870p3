@@ -4,13 +4,12 @@
 from numpy import *
 
 def iasebox(r=1):
-    from iasesum import iasesum
-    from iabinary import iabinary
+    from ia870 import iasesum, iabinary
 
 
     B = iasesum( iabinary([[1,1,1],
-                          [1,1,1],
-                          [1,1,1]]),r)
+                           [1,1,1],
+                           [1,1,1]]),r)
 
 
     return B

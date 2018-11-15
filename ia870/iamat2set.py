@@ -14,8 +14,8 @@ def iamat2set(A):
     if len(offsets) == 0: return ([],[])
     (h,w) = A.shape
     x = list(range(2))
-    x[0] = offsets/w - (h-1)/2
-    x[1] = offsets%w - (w-1)/2
+    x[0] = offsets//w - (h-1)//2
+    x[1] = offsets%w - (w-1)//2
     x = transpose(x)
     CV = x,ravel(A)[offsets]
     return CV

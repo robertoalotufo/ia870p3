@@ -5,7 +5,7 @@ import numpy as np
 def iase2off(Bc,option='neigh'):
     '''Converts structuring element to list of neighbor offsets in graph image'''
     h,w = Bc.shape
-    hc,wc = h/2,w/2
+    hc,wc = h//2,w//2
     B = Bc.copy()
     B[hc,wc] = 0  # remove origin
     off = np.transpose(B.nonzero()) - np.array([hc,wc])

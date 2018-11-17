@@ -4,13 +4,8 @@
 from numpy import *
 
 def iadil(f, b=None):
-    from iamat2set import iamat2set
-    from ialimits import ialimits
-    from iaisbinary import iaisbinary
-    from iaintersec import iaintersec
-    from iagray import iagray
-    from iaadd4dil import iaadd4dil
-    from iasecross import iasecross
+    from ia870 import iamat2set, ialimits,iaisbinary
+    from ia870 import iaintersec,iagray,iaadd4dil,iasecross
 
     if b is None: b = iasecross()
 

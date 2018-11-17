@@ -21,7 +21,7 @@ def iaseshow(B, option="NORMAL"):
         y = iasedil( iabinary([1]),B)
         b1= iabinary(y>=0)
         b0= b1<0
-        b0[shape(b0)[0]/2, shape(b0)[1]/2] = 1
+        b0[shape(b0)[0]//2, shape(b0)[1]//2] = 1
         y = iabshow(b1,y,b0)
         return y
     else:

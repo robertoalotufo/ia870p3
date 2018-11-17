@@ -4,13 +4,8 @@
 from numpy import *
 
 def iasedisk(r=3, DIM="2D", METRIC="EUCLIDEAN", FLAT="FLAT", h=0):
-    from iabinary import iabinary
-    from iasecross import iasecross
-    from iasedil import iasedil
-    from iasesum import iasesum
-    from iasebox import iasebox
-    from iaintersec import iaintersec
-    from iagray import iagray
+    from ia870 import iabinary,iasecross,iasedil,iasesum
+    from ia870 import iasebox,iaseintersec,iagray
 
     METRIC = METRIC.upper()
     FLAT   = FLAT.upper()

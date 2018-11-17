@@ -4,10 +4,7 @@
 from numpy import *
 
 def iaserot(B, theta=45, DIRECTION="CLOCKWISE"):
-    from iamat2set import iamat2set
-    from iabinary import iabinary
-    from iaset2mat import iaset2mat
-
+    from ia870 import iamat2set,iabinary,iaset2mat
 
     DIRECTION = DIRECTION.upper()
     if DIRECTION == "ANTI-CLOCKWISE":

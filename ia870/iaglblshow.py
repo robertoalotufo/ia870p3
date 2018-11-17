@@ -2,11 +2,11 @@
 # Module iaglblshow
 
 from numpy import *
+import numpy as np
 from numpy.random import rand
 
 def iaglblshow(X, border=0.0):
-    from iastats import iastats
-    from iaconcat import iaconcat
+    from ia870 import iastats, iaconcat
 
     iain = iastats(X,'min')
     iaax = iastats(X,'max')
@@ -19,6 +19,6 @@ def iaglblshow(X, border=0.0):
     r=resize(take(R.astype(uint8), X.flat - iain),X.shape)
     g=resize(take(G.astype(uint8), X.flat - iain),X.shape)
     b=resize(take(B.astype(uint8), X.flat - iain),X.shape)
-    Y=iaconcat('d',r,g,b)
+    Y=np.array([r,g,b])
     return Y
 

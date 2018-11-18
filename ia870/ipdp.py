@@ -214,7 +214,7 @@ class wsDomain:
         self.inner = range(length)
         self.count = 0
 
-    def next(self):
+    def __next__(self):
         if self.count >= len(self.inner):
             self.count = 0
             raise StopIteration
@@ -293,7 +293,8 @@ class wsHeapQueue():
 
     def push(self, a, c):
         """ Pushes an element to the queue """
-        if self.queue.has_key(c):
+        # if self.queue.has_key(c): for python 2
+        if c in self.queue:        #for python 3
             self.queue[c].append(a)
         else:
             self.queue[c] = [a]

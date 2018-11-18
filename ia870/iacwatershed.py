@@ -24,18 +24,20 @@ def ift_m(im, offsets, M):
     N, im, lab, D = ws.begin(offsets)
 
     wsM = wsImage(M)
-    NM, imM, labM, DM = wsM.begin(offsets)
+    #NM, imM, labM, DM = wsM.begin(offsets)
+    _, imM, _, _ = wsM.begin(offsets)
 
     # make the set
     Mset = dict()
     for p in D:
         if imM[p] > 0:
-            if Mset.has_key(imM[p]):
+            #if Mset.has_key(imM[p]):    for python 2
+            if imM[p] in Mset:          #for python 3
                 Mset[imM[p]].append(p)
             else:
                 Mset[imM[p]] = [p]
 
-    ift_k(ws, im, Mset.values(), N, D, lab)
+    ift_k(ws, im, list(Mset.values()), N, D, lab) # python 3
 
     return ws.end()
 

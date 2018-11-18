@@ -2,14 +2,11 @@
 # Module iagshow
 
 from numpy import *
+import numpy as np
 
 def iagshow(X, X1=None, X2=None, X3=None, X4=None, X5=None, X6=None):
-    from iaisbinary import iaisbinary
-    from iagray import iagray
-    from iaunion import iaunion
-    from iaintersec import iaintersec
-    from ianeg import ianeg
-    from iaconcat import iaconcat
+    from ia870 import iaisbinary,iagray,iaunion
+    from ia870 import iaintersec,ianeg,iaconcat
 
     if iaisbinary(X): X = iagray(X,'uint8')
     r = X
@@ -51,6 +48,6 @@ def iagshow(X, X1=None, X2=None, X3=None, X4=None, X5=None, X6=None):
       r = iaintersec(r,ianeg(x6))
       g = iaunion(g,x6)
       b = iaunion(b,x6)
-    return iaconcat('d',r,g,b)
+    return np.array([r,g,b])
     return Y
 

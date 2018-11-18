@@ -4,7 +4,7 @@
 from numpy import *
 
 def iasubm(f1, f2):
-    from ialimits import ialimits
+    from ia870 import ialimits
 
     if type(f2) is array:
         assert f1.dtype == f2.dtype, 'Cannot have different datatypes:'

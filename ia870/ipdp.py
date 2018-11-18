@@ -2,6 +2,7 @@
 # Module ipdp
 
 from numpy import array, ravel
+from functools import reduce
 
 # constants
 # neighbourhood 2D
@@ -71,7 +72,7 @@ class wsImage():
         # adding the extra space needed at each dimension
         newshape = tuple(map(lambda orig, d: orig + (d-1), self.input.shape, self.neighbour.shape))
         # generate the slicing list
-        slicing = map(lambda orig, d: slice((d-1)/2, (d-1)/2 + orig), self.input.shape, self.neighbour.shape)
+        slicing = list(map(lambda orig, d: slice((d-1)//2, (d-1)//2 + orig), self.input.shape, self.neighbour.shape))
         # create the padded image
         workimage = zeros(newshape)
         workimage[:] = BORDER
@@ -85,7 +86,7 @@ class wsImage():
         """ Reshape and crops the N-D label image to the original size (same as self.input) """
         from numpy import reshape
         # generate the slicing list
-        slicing = map(lambda orig, d: slice((d-1)/2, (d-1)/2 + orig), self.input.shape, self.neighbour.shape)
+        slicing = list(map(lambda orig, d: slice((d-1)//2, (d-1)//2 + orig), self.input.shape, self.neighbour.shape))
         # reshape the label image to the original shape
         temp = reshape(x, self.workshape)
         # crop the temp image
@@ -103,7 +104,7 @@ class wsImage():
 
     def getCoordinate(self, p):
         """ Get the coordinates in (x,y) form for index p"""
-        return (p / self.workshape[1], p % self.workshape[1])
+        return (p // self.workshape[1], p % self.workshape[1])
 
 
 class wsNeighbour():
@@ -163,14 +164,14 @@ class wsNeighbour():
             # self.roffsets.append(roffset)
 
         # SHORT VERSION (using map and reduce - I like this one better)
-        self.roffsets = map(
+        self.roffsets = list(map(
             lambda offset: sum(
-                map(lambda n, i:
+                list(map(lambda n, i:
                         n * reduce(lambda x,y: x*y, self.s[(i+1):], 1),
                     offset, list(range(len(offset)))
-                    )
+                    ))
                 ),
-            self.offsets)
+            self.offsets))
 
     def setImage(self, im):
         """ Set the working image to query for border values on neighbourhood calculation """
@@ -182,7 +183,7 @@ class wsNeighbour():
             raise Exception("Set the image shape first!")
 
         # calculate the coordinates of the neighbours based on the offsets in 1-D
-        n = map(lambda c: c + pixel, self.roffsets)
+        n = list(map(lambda c: c + pixel, self.roffsets))
         r = list()
 
         for i in n:
@@ -496,8 +497,8 @@ def se2offset(se):
     offset = []
     for i in range(se.shape[0]):
         for j in range(se.shape[1]):
-            if se[i,j] == True and (i-se.shape[0]/2 != 0 or j-se.shape[1]/2 != 0):
-                offset.append([i-se.shape[0]/2,j-se.shape[1]/2])
+            if se[i,j] == True and (i-se.shape[0]//2 != 0 or j-se.shape[1]//2 != 0):
+                offset.append([i-se.shape[0]//2,j-se.shape[1]//2])
 
     return array(offset)
 

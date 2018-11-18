@@ -4,7 +4,7 @@
 from ia870 import iasecross, iaisbinary, ialabel, iasubm, iaero, iabinary
 
 def iacwatershed(f, g, Bc=iasecross(), option='LINES'):
-    from ipdp import se2offset
+    from ia870.ipdp import se2offset
 
     if iaisbinary(g):
         g = ialabel(g, Bc)
@@ -17,7 +17,7 @@ def iacwatershed(f, g, Bc=iasecross(), option='LINES'):
 
 def ift_m(im, offsets, M):
 
-    from ipdp import wsImage
+    from ia870.ipdp import wsImage
 
     # initialise variables
     ws = wsImage(im)
@@ -45,7 +45,7 @@ MASK = -2
 def ift_k(ws, im, M, N, D, lab):
 
     import numpy as np
-    from ipdp import wsHeapQueue
+    from ia870.ipdp import wsHeapQueue
 
     # create the working images
     done = ws.makeWorkCopy(False)

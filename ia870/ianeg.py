@@ -1,12 +1,12 @@
 # -*- encoding: utf-8 -*-
 # Module ianeg
 
-from numpy import *
-
 def ianeg(f):
-    from ialimits import ialimits
+    from ia870 import ialimits
 
-    if ialimits(f)[0] == (- ialimits(f)[1]):
+    if f.dtype == bool:
+        return ~ f
+    elif ialimits(f)[0] == (- ialimits(f)[1]):
        y = -f
     else:
        y = ialimits(f)[0] + ialimits(f)[1] - f

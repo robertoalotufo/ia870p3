@@ -4,7 +4,7 @@
 from numpy import *
 
 def iaseintersec(B1, B2):
-    from ialimits import ialimits
+    from ia870.ialimits import ialimits
     from ia870 import iamat2set, iaset2mat
 
     assert B1.dtype == B2.dtype, \

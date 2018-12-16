@@ -5,14 +5,14 @@ from numpy import *
 from ia870.iasecross import iasecross
 
 def iainpos(f, g, bc=iasecross()):
-    from iaisbinary import iaisbinary
-    from iagray import iagray
-    from ianeg import ianeg
-    from iadatatype import iadatatype
-    from ialimits import ialimits
-    from iasuprec import iasuprec
-    from iaintersec import iaintersec
-    from iaunion import iaunion
+    from ia870.iaisbinary import iaisbinary
+    from ia870.iagray import iagray
+    from ia870.ianeg import ianeg
+    from ia870.iadatatype import iadatatype
+    from ia870.ialimits import ialimits
+    from ia870.iasuprec import iasuprec
+    from ia870.iaintersec import iaintersec
+    from ia870.iaunion import iaunion
 
     assert iaisbinary(f),'First parameter must be binary image'
     fg = iagray( ianeg(f), iadatatype(g))

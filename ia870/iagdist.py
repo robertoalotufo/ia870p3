@@ -5,13 +5,13 @@ from numpy import *
 from ia870.iasecross import iasecross
 
 def iagdist(f, g, Bc=iasecross(), METRIC=None):
-    from ianeg import ianeg
-    from iagray import iagray
-    from iaintersec import iaintersec
-    from iaisequal import iaisequal
-    from iacero import iacero
-    from iaaddm import iaaddm
-    from iaunion import iaunion
+    from ia870.ianeg import ianeg
+    from ia870.iagray import iagray
+    from ia870.iaintersec import iaintersec
+    from ia870.iaisequal import iaisequal
+    from ia870.iacero import iacero
+    from ia870.iaaddm import iaaddm
+    from ia870.iaunion import iaunion
 
     assert METRIC is None,'Does not support EUCLIDEAN'
     fneg,gneg = ianeg(f),ianeg(g)

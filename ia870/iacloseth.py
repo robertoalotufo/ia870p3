@@ -4,9 +4,9 @@
 from numpy import *
 
 def iacloseth(f, b=None):
-    from iasubm import iasubm
-    from iaclose import iaclose
-    from iasecross import iasecross
+    from ia870.iasubm import iasubm
+    from ia870.iaclose import iaclose
+    from ia870.iasecross import iasecross
     if b is None:
         b = iasecross()
 

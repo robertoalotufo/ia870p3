@@ -5,8 +5,8 @@ from numpy import *
 from ia870.iasecross import iasecross
 
 def iapad(f, B=iasecross(), value=0):
-    from iamat2set import iamat2set
-    from iaseshow import iaseshow
+    from ia870.iamat2set import iamat2set
+    from ia870.iaseshow import iaseshow
 
     i,v=iamat2set( iaseshow(B));
     mni=i.min(axis=0)

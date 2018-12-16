@@ -4,9 +4,9 @@
 from numpy import *
 
 def iaopenth(f, b=None):
-    from iasubm import iasubm
-    from iaopen import iaopen
-    from iasecross import iasecross
+    from ia870.iasubm import iasubm
+    from ia870.iaopen import iaopen
+    from ia870.iasecross import iasecross
     if b is None:
         b = iasecross()
 

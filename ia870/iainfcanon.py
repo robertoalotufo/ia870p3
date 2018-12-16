@@ -4,10 +4,10 @@
 from numpy import *
 
 def iainfcanon(f, Iab, theta=45, DIRECTION="CLOCKWISE"):
-    from iaunion import iaunion
-    from iainterot import iainterot
-    from iaintersec import iaintersec
-    from iainfgen import iainfgen
+    from ia870.iaunion import iaunion
+    from ia870.iainterot import iainterot
+    from ia870.iaintersec import iaintersec
+    from ia870.iainfgen import iainfgen
 
     DIRECTION = DIRECTION.upper()
     y = iaunion(f,1)

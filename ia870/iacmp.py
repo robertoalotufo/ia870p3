@@ -4,8 +4,8 @@
 from numpy import *
 
 def iacmp(f1, oper, f2, oper1=None, f3=None):
-    from iaintersec import iaintersec
-    from iabinary import iabinary
+    from ia870.iaintersec import iaintersec
+    from ia870.iabinary import iabinary
 
 
     if   oper == '==':    y = (f1==f2)

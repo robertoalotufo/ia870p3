@@ -4,11 +4,11 @@
 from numpy import *
 
 def iaskelmrec(f, B=None):
-    from iabinary import iabinary
-    from iaintersec import iaintersec
-    from iadil import iadil
-    from iaunion import iaunion
-    from iasecross import iasecross
+    from ia870.iabinary import iabinary
+    from ia870.iaintersec import iaintersec
+    from ia870.iadil import iadil
+    from ia870.iaunion import iaunion
+    from ia870.iasecross import iasecross
     if B is None:
         B = iasecross(None)
 

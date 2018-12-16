@@ -4,12 +4,12 @@
 from numpy import *
 
 def iatoggle(f, f1, f2, OPTION="GRAY"):
-    from iabinary import iabinary
-    from iasubm import iasubm
-    from iagray import iagray
-    from iaunion import iaunion
-    from iaintersec import iaintersec
-    from ianeg import ianeg
+    from ia870.iabinary import iabinary
+    from ia870.iasubm import iasubm
+    from ia870.iagray import iagray
+    from ia870.iaunion import iaunion
+    from ia870.iaintersec import iaintersec
+    from ia870.ianeg import ianeg
 
 
     y=iabinary( iasubm(f,f1),iasubm(f2,f))

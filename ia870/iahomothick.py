@@ -4,8 +4,8 @@
 from numpy import *
 
 def iahomothick():
-    from iase2hmt import iase2hmt
-    from iabinary import iabinary
+    from ia870.iase2hmt import iase2hmt
+    from ia870.iabinary import iabinary
 
 
     Iab = iase2hmt( iabinary([[1,1,1],

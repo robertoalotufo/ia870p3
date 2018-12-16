@@ -5,19 +5,19 @@ from numpy import *
 from ia870.iasecross import iasecross
 
 def iaskelm(f, B=iasecross(), option="binary"):
-    from iaisbinary import iaisbinary
-    from ialimits import ialimits
-    from iagray import iagray
-    from iaintersec import iaintersec
-    from iasesum import iasesum
-    from iaero import iaero
-    from iaisequal import iaisequal
-    from iaopenth import iaopenth
-    from iasedil import iasedil
-    from iaunion import iaunion
-    from iabinary import iabinary
-    from iapad import iapad
-    from iaunpad import iaunpad
+    from ia870.iaisbinary import iaisbinary
+    from ia870.ialimits import ialimits
+    from ia870.iagray import iagray
+    from ia870.iaintersec import iaintersec
+    from ia870.iasesum import iasesum
+    from ia870.iaero import iaero
+    from ia870.iaisequal import iaisequal
+    from ia870.iaopenth import iaopenth
+    from ia870.iasedil import iasedil
+    from ia870.iaunion import iaunion
+    from ia870.iabinary import iabinary
+    from ia870.iapad import iapad
+    from ia870.iaunpad import iaunpad
 
     assert iaisbinary(f),'Input binary image only'
     option = option.upper()

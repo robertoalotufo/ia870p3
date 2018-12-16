@@ -4,8 +4,8 @@
 from numpy import *
 
 def iaintershow(Iab):
-    from iaseunion import iaseunion
-    from iaintersec import iaintersec
+    from ia870.iaseunion import iaseunion
+    from ia870.iaintersec import iaintersec
 
 
     assert (type(Iab) is tuple) and (len(Iab) == 2),'not proper fortmat of hit-or-miss template'

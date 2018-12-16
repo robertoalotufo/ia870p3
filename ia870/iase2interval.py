@@ -4,7 +4,7 @@
 from numpy import *
 
 def iase2interval(a, b):
-    from ianeg import ianeg
+    from ia870.ianeg import ianeg
 
     Iab = (a,ianeg(b))
     return Iab

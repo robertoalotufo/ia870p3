@@ -5,9 +5,9 @@ from numpy import *
 from ia870.iasecross import iasecross
 
 def ialastero(f, B=iasecross()):
-    from iaisbinary import iaisbinary
-    from iadist import iadist
-    from iaregmax import iaregmax
+    from ia870.iaisbinary import iaisbinary
+    from ia870.iadist import iadist
+    from ia870.iaregmax import iaregmax
 
     assert iaisbinary(f),'Can only process binary images'
     dt = iadist(f,B)

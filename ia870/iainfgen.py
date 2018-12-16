@@ -4,9 +4,9 @@
 from numpy import *
 
 def iainfgen(f, Iab):
-    from iaunion import iaunion
-    from iadil import iadil
-    from ianeg import ianeg
+    from ia870.iaunion import iaunion
+    from ia870.iadil import iadil
+    from ia870.ianeg import ianeg
 
 
     A, Bc = Iab

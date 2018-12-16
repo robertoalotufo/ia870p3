@@ -4,13 +4,13 @@
 from numpy import *
 
 def iacthick(f, g, Iab=None, n=-1, theta=45, DIRECTION="CLOCKWISE"):
-    from iaisbinary import iaisbinary
-    from iasupgen import iasupgen
-    from iainterot import iainterot
-    from iaintersec import iaintersec
-    from iaunion import iaunion
-    from iaisequal import iaisequal
-    from iahomothick import iahomothick
+    from ia870.iaisbinary import iaisbinary
+    from ia870.iasupgen import iasupgen
+    from ia870.iainterot import iainterot
+    from ia870.iaintersec import iaintersec
+    from ia870.iaunion import iaunion
+    from ia870.iaisequal import iaisequal
+    from ia870.iahomothick import iahomothick
     if Iab is None:
         Iab = iahomothick()
 

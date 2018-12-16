@@ -4,8 +4,8 @@
 from numpy import *
 
 def iainterot(Iab, theta=45, DIRECTION="CLOCKWISE"):
-    from iase2hmt import iase2hmt
-    from iaserot import iaserot
+    from ia870.iase2hmt import iase2hmt
+    from ia870.iaserot import iaserot
 
 
     DIRECTION = DIRECTION.upper()

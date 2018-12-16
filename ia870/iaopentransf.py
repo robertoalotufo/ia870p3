@@ -5,16 +5,16 @@ from numpy import *
 from ia870.iasecross import iasecross
 
 def iaopentransf(f, type='OCTAGON', n=65535, Bc=iasecross(), Buser=iasecross()):
-    from iaisbinary import iaisbinary
-    from iabinary import iabinary
-    from iaisequal import iaisequal
-    from iaopen import iaopen
-    from iasesum import iasesum
-    from iasedisk import iasedisk
-    from iaaddm import iaaddm
-    from iagray import iagray
-    from iagrain import iagrain
-    from ialabel import ialabel
+    from ia870.iaisbinary import iaisbinary
+    from ia870.iabinary import iabinary
+    from ia870.iaisequal import iaisequal
+    from ia870.iaopen import iaopen
+    from ia870.iasesum import iasesum
+    from ia870.iasedisk import iasedisk
+    from ia870.iaaddm import iaaddm
+    from ia870.iagray import iagray
+    from ia870.iagrain import iagrain
+    from ia870.ialabel import ialabel
 
     assert iaisbinary(f),'Error: input image is not binary'
     type = type.upper()

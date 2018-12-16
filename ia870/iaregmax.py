@@ -5,11 +5,11 @@ from numpy import *
 from ia870.iasecross import iasecross
 
 def iaregmax(f, Bc=iasecross()):
-    from iasubm import iasubm
-    from iahmax import iahmax
-    from iabinary import iabinary
-    from iaregmin import iaregmin
-    from ianeg import ianeg
+    from ia870.iasubm import iasubm
+    from ia870.iahmax import iahmax
+    from ia870.iabinary import iabinary
+    from ia870.iaregmin import iaregmin
+    from ia870.ianeg import ianeg
 
     y = iasubm(f, iahmax(f,1,Bc))
     return iabinary(y)

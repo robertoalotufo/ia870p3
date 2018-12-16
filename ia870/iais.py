@@ -4,12 +4,12 @@
 from numpy import *
 
 def iais(f1, oper, f2=None, oper1=None, f3=None):
-    from iaisbinary import iaisbinary
-    from iaisequal import iaisequal
-    from iaislesseq import iaislesseq
-    from ianeg import ianeg
-    from iathreshad import iathreshad
-    from iabinary import iabinary
+    from ia870.iaisbinary import iaisbinary
+    from ia870.iaisequal import iaisequal
+    from ia870.iaislesseq import iaislesseq
+    from ia870.ianeg import ianeg
+    from ia870.iathreshad import iathreshad
+    from ia870.iabinary import iabinary
 
 
     if f2 == None:

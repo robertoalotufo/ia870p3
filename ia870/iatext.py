@@ -4,8 +4,8 @@
 from numpy import *
 
 def iatext(txt):
-    from iabinary import iabinary
-    from iaconcat import iaconcat
+    from ia870.iabinary import iabinary
+    from ia870.iaconcat import iaconcat
 
     FontDft = iabinary([
      0,   0,   0,   0,   0,   0,   0,   0,   0,

@@ -4,10 +4,10 @@
 from numpy import *
 
 def iasupcanon(f, Iab, theta=45, DIRECTION="CLOCKWISE"):
-    from iaintersec import iaintersec
-    from iainterot import iainterot
-    from iaunion import iaunion
-    from iasupgen import iasupgen
+    from ia870.iaintersec import iaintersec
+    from ia870.iainterot import iainterot
+    from ia870.iaunion import iaunion
+    from ia870.iasupgen import iasupgen
 
     DIRECTION = DIRECTION.upper()
     y = iaintersec(f,0)

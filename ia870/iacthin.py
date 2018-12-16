@@ -4,13 +4,13 @@
 from numpy import *
 
 def iacthin(f, g, Iab=None, n=-1, theta=45, DIRECTION="CLOCKWISE"):
-    from iaisbinary import iaisbinary
-    from iasupgen import iasupgen
-    from iainterot import iainterot
-    from iaunion import iaunion
-    from iasubm import iasubm
-    from iaisequal import iaisequal
-    from iahomothin import iahomothin
+    from ia870.iaisbinary import iaisbinary
+    from ia870.iasupgen import iasupgen
+    from ia870.iainterot import iainterot
+    from ia870.iaunion import iaunion
+    from ia870.iasubm import iasubm
+    from ia870.iaisequal import iaisequal
+    from ia870.iahomothin import iahomothin
     if Iab is None:
         Iab = iahomothin()
 

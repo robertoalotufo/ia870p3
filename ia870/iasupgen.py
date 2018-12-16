@@ -4,9 +4,9 @@
 from numpy import *
 
 def iasupgen(f, INTER):
-    from iaintersec import iaintersec
-    from iaero import iaero
-    from ianeg import ianeg
+    from ia870.iaintersec import iaintersec
+    from ia870.iaero import iaero
+    from ia870.ianeg import ianeg
 
 
     A,Bc = INTER

@@ -4,8 +4,8 @@
 from numpy import *
 
 def iaseline(l=3, theta=0):
-    from iaset2mat import iaset2mat
-    from iabinary import iabinary
+    from ia870.iaset2mat import iaset2mat
+    from ia870.iabinary import iabinary
 
     theta = pi*theta/180
     if abs(tan(theta)) <= 1:

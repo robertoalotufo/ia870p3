@@ -5,9 +5,9 @@ from numpy import *
 from ia870.iasecross import iasecross
 
 def iacdil(f, g, b=iasecross(), n=1):
-    from iaintersec import iaintersec
-    from iadil import iadil
-    from iaisequal import iaisequal
+    from ia870.iaintersec import iaintersec
+    from ia870.iadil import iadil
+    from ia870.iaisequal import iaisequal
 
     y = iaintersec(f,g)
     for i in range(n):

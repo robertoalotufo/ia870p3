@@ -12,7 +12,7 @@ def iainfrec_eq(f, g, bc=iasecross()):
 
 def iainfrec(m, f, Bc=iasecross()):
     h,w = Bc.shape
-    hc,wc = h/2,w/2
+    hc,wc = h//2,w//2
     B = Bc.copy()
     off = np.transpose(B.nonzero()) - np.array([hc,wc])
     i = off[:,0] * w + off[:,1]

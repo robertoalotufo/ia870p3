@@ -1,17 +1,13 @@
 # -*- encoding: utf-8 -*-
 # Module iasuprec
 
-from numpy import *
+import numpy as np
+from ia870.iasecross import iasecross
 
-def iasuprec(f, g, Bc=None):
-    from iacero import iacero
-    from iasecross import iasecross
-    if Bc is None:
-        Bc = iasecross(None)
-
-
-    n = product(f.shape)
-    y = iacero(f,g,Bc,n);
-
+def iasuprec(f, g, Bc=iasecross()):
+    from ia870.iacero import iacero
+    
+    n = np.product(f.shape)
+    y = iacero(f,g,Bc,n)
     return y
 

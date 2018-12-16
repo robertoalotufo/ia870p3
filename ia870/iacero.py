@@ -5,9 +5,9 @@ from numpy import *
 from ia870.iasecross import iasecross
 
 def iacero(f, g, b=iasecross(), n=1):
-    from iaunion import iaunion
-    from iaero import iaero
-    from iaisequal import iaisequal
+    from ia870.iaunion import iaunion
+    from ia870.iaero import iaero
+    from ia870.iaisequal import iaisequal
 
     y = iaunion(f,g)
     for i in range(n):

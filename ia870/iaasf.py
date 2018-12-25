@@ -4,10 +4,10 @@
 from numpy import *
 
 def iaasf(f, SEQ="OC", b=None, n=1):
-    from iasesum import iasesum
-    from iaopen import iaopen
-    from iaclose import iaclose
-    from iasecross import iasecross
+    from ia870.iasesum import iasesum
+    from ia870.iaopen import iaopen
+    from ia870.iaclose import iaclose
+    from ia870.iasecross import iasecross
     if b is None:
         b = iasecross(None)
 

@@ -38,7 +38,7 @@ def iasedisk(r=3, DIM="2D", METRIC="EUCLIDEAN", FLAT="FLAT", h=0):
                         [          0, 1,          0],
                         [-2147483647, 0,-2147483647]])
         if r==1: return b1
-        else:    return iasedil( iasedil(y,iasesum(b1,r/2)) ,iasesum(b2,(r+1)/2))
+        else:    return iasedil( iasedil(y,iasesum(b1,r//2)) ,iasesum(b2,(r+1)//2))
     elif METRIC == 'EUCLIDEAN':
         v = arange(-r,r+1)
         x = resize(v, (len(v), len(v)))

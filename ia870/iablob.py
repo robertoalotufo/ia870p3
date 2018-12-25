@@ -30,7 +30,7 @@ def iablob(fr, measurement, option="image"):
             aux  = (fr==i)
             xind,yind = np.nonzero(aux)
             area = len(xind)
-            centroid = [xind.sum()/area,yind.sum()/area]
+            centroid = [xind.sum()//area,yind.sum()//area]
             if option == 'DATA': y.append([centroid[1],centroid[0]])
             else               : y[centroid[0],centroid[1]] = 1
 

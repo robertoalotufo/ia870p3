@@ -17,9 +17,6 @@ def iaintershow(Iab):
     zero = reshape(array(n*'0','c'),S.shape)
     x    = reshape(array(n*'.','c'),S.shape)
     saux = choose( S + iaseunion(Z,A), ( x, zero, one))
-    s = ''
-    for i in range(saux.shape[0]):
-        s = s + ' \n'.join(list(saux[i]))
 
-    return s
+    return '\n'.join([ss.tostring().decode() for ss in saux])
 

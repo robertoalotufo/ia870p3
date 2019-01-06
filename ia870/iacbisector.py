@@ -4,12 +4,12 @@
 from numpy import *
 
 def iacbisector(f, B, n):
-    from iaintersec import iaintersec
-    from iasesum import iasesum
-    from iaero import iaero
-    from iacdil import iacdil
-    from iasubm import iasubm
-    from iaunion import iaunion
+    from ia870.iaintersec import iaintersec
+    from ia870.iasesum import iasesum
+    from ia870.iaero import iaero
+    from ia870.iacdil import iacdil
+    from ia870.iasubm import iasubm
+    from ia870.iaunion import iaunion
 
     y = iaintersec(f,0)
     for i in range(n):

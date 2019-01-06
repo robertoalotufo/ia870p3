@@ -4,7 +4,7 @@ from ia870.iasecross import iasecross
 
 def iawatershed(f, Bc=iasecross(), option='LINES'):
     from ia870 import iasubm, iaero, iabinary
-    from ipdp import se2offset
+    from ia870.ipdp import se2offset
 
     offset = se2offset(Bc)
     w = connectedComponents(f, offset)
@@ -19,8 +19,8 @@ PLATEAU = -1
 
 def connectedComponents(im, offsets):
 
-    from ipdp import wsImage
-    from ipdp import wsQueue
+    from ia870.ipdp import wsImage
+    from ia870.ipdp import wsQueue
 
     # initialise variables
     ws = wsImage(im)

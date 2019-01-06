@@ -5,9 +5,9 @@ from numpy import *
 from ia870.iasecross import iasecross
 
 def iaasfrec(f, SEQ="OC", b=iasecross(), bc=iasecross(), n=1):
-    from iasesum import iasesum
-    from iacloserec import iacloserec
-    from iaopenrec import iaopenrec
+    from ia870.iasesum import iasesum
+    from ia870.iacloserec import iacloserec
+    from ia870.iaopenrec import iaopenrec
 
     SEQ = SEQ.upper()
     y = f

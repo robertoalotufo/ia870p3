@@ -72,7 +72,8 @@ class wsImage():
         # adding the extra space needed at each dimension
         newshape = tuple(map(lambda orig, d: orig + (d-1), self.input.shape, self.neighbour.shape))
         # generate the slicing list
-        slicing = list(map(lambda orig, d: slice((d-1)//2, (d-1)//2 + orig), self.input.shape, self.neighbour.shape))
+        #slicing = list(map(lambda orig, d: slice((d-1)//2, (d-1)//2 + orig), self.input.shape, self.neighbour.shape))
+        slicing = tuple(map(lambda orig, d: slice((d-1)//2, (d-1)//2 + orig), self.input.shape, self.neighbour.shape))
         # create the padded image
         workimage = zeros(newshape)
         workimage[:] = BORDER
@@ -86,7 +87,7 @@ class wsImage():
         """ Reshape and crops the N-D label image to the original size (same as self.input) """
         from numpy import reshape
         # generate the slicing list
-        slicing = list(map(lambda orig, d: slice((d-1)//2, (d-1)//2 + orig), self.input.shape, self.neighbour.shape))
+        slicing = tuple(map(lambda orig, d: slice((d-1)//2, (d-1)//2 + orig), self.input.shape, self.neighbour.shape))
         # reshape the label image to the original shape
         temp = reshape(x, self.workshape)
         # crop the temp image
